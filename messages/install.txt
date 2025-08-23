@@ -1,0 +1,4 @@
+## Installation
+- Install LSP and LSP-slangd from Package Control
+- Install slangd using your package manager or let this plugin install slangd for you
+
