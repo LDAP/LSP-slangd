@@ -1,5 +1,4 @@
 import os
-import platform
 import shutil
 import stat
 import sys
@@ -47,10 +46,10 @@ def slangd_download_url():
     if platform_str == "osx":
         platform_str = "macos"
 
-    machine_str = platform.machine()
-    if machine_str == "x86_64" or machine_str == "AMD64":
+    arch = sublime.arch()
+    if arch == "x64":
         cpu_family = "x86_64"
-    elif machine_str == "ARM64" or machine_str == "aarch64":
+    elif arch == "arm64":
         cpu_family = "aarch64"
     else:
         raise OSError("unsupported cpu family")
